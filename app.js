@@ -16,3 +16,14 @@ function agregarAmigo() {
 
     input.value = "";
 }
+
+function mostrarLista() {
+    let listaHTML = document.getElementById("listaAmigos");
+    listaHTML.innerHTML = "";
+
+    listaAmigos.forEach(nombre => {
+        let li = document.createElement("li");
+        li.textContent = nombre;
+        listaHTML.appendChild(li);
+    });
+}
